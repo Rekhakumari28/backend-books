@@ -1,7 +1,7 @@
 {
   "name": "be4_assignment1",
   "version": "1.0.0",
-  "main": "books.models.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"node index.js"
@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "json": "^11.0.0",
     "mongoose": "^8.7.0"
   }
 }

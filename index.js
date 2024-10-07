@@ -89,7 +89,7 @@ async function findBookByAuthor(bookAuthor) {
 app.get("/books/author/:authorName", async(req, res)=>{
     try{
         const book = await findBookByAuthor(req.params.authorName)
-        if(book){
+        if(book.length !=0){
             res.json(book)
         }else{
             res.status(404).json({error: "Book not found."})
@@ -113,7 +113,7 @@ async function findBookByGenre(genreName) {
 app.get("/books/genre/:genreName", async(req,res)=>{
     try{
         const book = await findBookByGenre(req.params.genreName)
-        if(book){
+        if(book.length !=0){
             res.json(book)
         }else{
             res.status(404).json({error: "No book found."})
@@ -136,7 +136,7 @@ async function findBookByReleaseYear(releaseYear) {
 app.get('/books/releaseYear/:releaseYear', async(req,res)=>{
     try{
         const book = await findBookByReleaseYear(req.params.releaseYear)
-        if(book){
+        if(book.length !=0){
             res.json(book)
         }else{
             res.status(404).json({error:"No book found."})
